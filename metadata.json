@@ -1,0 +1,6 @@
+{
+  "name": "Vista Browser",
+  "description": "Privacy-first browser with Brave-style glass homepage, Gemini AI Overview web search, built-in ad & video ad blocker, integrated VPN, turbo downloads, and cloud bookmark sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

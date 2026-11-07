@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Vista Browser</string>
+    <string name="auth_title">Vista Browser</string>
+    <string name="auth_subtitle">Fast, privacy-first browsing with Gemini AI Overview search, built-in Video AdBlocker, VPN Shield, and cross-device Bookmark Sync.</string>
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="search_or_type_url">Search Vista or type URL</string>
+    <string name="add_shortcut_title">Add Website Shortcut</string>
+    <string name="shortcut_name_label">Website Name</string>
+    <string name="shortcut_url_label">Website URL (e.g. youtube.com)</string>
+    <string name="ok_button">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="exit_fullscreen">Exit Full Screen</string>
+    <string name="vpn_shield_title">Vista Encrypted VPN Shield</string>
+    <string name="downloads_title">Turbo Multi-Thread Downloads</string>
+    <string name="bookmarks_title">Cloud Synced Bookmarks</string>
+    <string name="tabs_title">Open Browser Tabs</string>
+    <string name="settings_title">Browser Customization &amp; Memory</string>
+</resources>

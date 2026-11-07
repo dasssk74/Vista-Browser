@@ -1,0 +1,110 @@
+{
+  "entities": {
+    "Bookmark": {
+      "title": "Bookmark",
+      "description": "A user's synced browser bookmark stored in Cloud Firestore.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The authenticated user's UID owning this bookmark."
+        },
+        "title": {
+          "type": "string",
+          "description": "The display title of the bookmarked webpage."
+        },
+        "url": {
+          "type": "string",
+          "description": "The full URL of the bookmarked webpage."
+        },
+        "folder": {
+          "type": "string",
+          "description": "The bookmark folder or category name."
+        },
+        "faviconUrl": {
+          "type": "string",
+          "description": "The resolved favicon URL for the website."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the bookmark was created (clients must submit FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the bookmark was last updated (clients must submit FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "title",
+        "url",
+        "folder",
+        "faviconUrl",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Shortcut": {
+      "title": "Shortcut",
+      "description": "A speed-dial website shortcut saved to the user's browser homepage.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The authenticated user's UID owning this homepage shortcut."
+        },
+        "name": {
+          "type": "string",
+          "description": "The display name of the shortcut."
+        },
+        "url": {
+          "type": "string",
+          "description": "The target website URL."
+        },
+        "logoUrl": {
+          "type": "string",
+          "description": "The automatically resolved website logo/favicon URL."
+        },
+        "isPinned": {
+          "type": "boolean",
+          "description": "Whether the shortcut is pinned to the top of the speed dial."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the shortcut was created (clients must submit FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the shortcut was last updated (clients must submit FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "name",
+        "url",
+        "logoUrl",
+        "isPinned",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/bookmarks/{bookmarkId}": {
+      "schema": {
+        "$ref": "#/entities/Bookmark"
+      },
+      "description": "Stores per-user cloud-synced browser bookmarks."
+    },
+    "/users/{userId}/shortcuts/{shortcutId}": {
+      "schema": {
+        "$ref": "#/entities/Shortcut"
+      },
+      "description": "Stores per-user speed-dial homepage website shortcuts."
+    }
+  }
+}
